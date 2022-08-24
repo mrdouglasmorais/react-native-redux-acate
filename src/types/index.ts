@@ -6,3 +6,7 @@ export interface IProduct{
   price: number;
   inStock: boolean;
 }
+
+export interface ICart{
+  cart: IProduct[]
+}
