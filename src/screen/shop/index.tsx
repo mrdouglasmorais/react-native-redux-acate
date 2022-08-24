@@ -6,6 +6,8 @@ import {
   ScrollView
 } from 'react-native';
 
+import Cart from '../../component/cart'
+
 import styles from './style';
 
 import { products } from '../../constants'
@@ -16,6 +18,7 @@ const Shop = () => {
     <View
       style={styles.container}
     >
+      <Cart />
       <ScrollView>
         { products?.map( item => (
           <View 
@@ -48,12 +51,8 @@ const Shop = () => {
                 }).format(item.price)}
               </Text>
               <Button
-                title='adicionar'
+                title='Adicionar ao carrinho'
                 onPress={() => alert('Adicionado')}
-              />
-              <Button
-                title='remover'
-                onPress={ () => alert('Remover') }
               />
             </View>
 

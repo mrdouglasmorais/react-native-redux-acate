@@ -7,7 +7,7 @@ import {
     height: '100%',
     width: '100%',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   card: {
     flexDirection: 'row',
