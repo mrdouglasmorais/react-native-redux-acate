@@ -51,11 +51,11 @@ const Cart = () => {
             />
             <Text>Fechar</Text>
           </TouchableOpacity>
-          
+
           {cart.length > 0 ? (
             <View>
-            { cart.map( item => (
-              <View>
+            { cart.map( (item, index) => (
+              <View key={index}>
                 <Text>{item.name}</Text>
               </View>
             ))}
