@@ -6,6 +6,7 @@ import {
 import { 
   ICart,
   IProduct,
+  ICartState
 } from '../../../types'
 
 const initialState = {
@@ -26,6 +27,6 @@ const CartData = createSlice({
 
 export const { addNewItem } = CartData.actions;
 
-export const cartStateData = (state: any) => state.cartData;
+export const cartStateData = (state: ICartState) => state.cart.cart;
 
 export default CartData.reducer;

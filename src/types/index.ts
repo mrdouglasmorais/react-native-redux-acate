@@ -10,3 +10,9 @@ export interface IProduct{
 export interface ICart{
   cart: IProduct[]
 }
+
+export interface ICartState{
+  cart: {
+    cart: IProduct[]
+  }
+}

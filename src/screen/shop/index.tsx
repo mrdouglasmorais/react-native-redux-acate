@@ -6,15 +6,34 @@ import {
   ScrollView
 } from 'react-native';
 
-import Cart from '../../component/cart'
+import {
+  useDispatch
+} from 'react-redux';
+
+import { 
+  addNewItem 
+} from '../../store/modules/cart/reducer';
+
+import Cart from '../../component/cart';
 
 import styles from './style';
 
-import { products } from '../../constants'
+import { products } from '../../constants';
+
+import {
+  IProduct
+} from '../../types/index'
 
 const Shop = () => {
+
+  const dispatch = useDispatch();
+
+  const addCartItemShop = (item: IProduct) => {
+    console.log(item);
+    dispatch(addNewItem(item));
+  }
+
   return (
-    
     <View
       style={styles.container}
     >
@@ -52,7 +71,7 @@ const Shop = () => {
               </Text>
               <Button
                 title='Adicionar ao carrinho'
-                onPress={() => alert('Adicionado')}
+                onPress={() => addCartItemShop(item)}
               />
             </View>
 

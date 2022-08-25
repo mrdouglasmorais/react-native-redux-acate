@@ -11,6 +11,12 @@ export default StyleSheet.create({
     marginRight: 40,
     paddingVertical: 20
   },
+  modalBody: {
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   contentCart: {
     backgroundColor: '#000540',
     borderRadius: 100,
