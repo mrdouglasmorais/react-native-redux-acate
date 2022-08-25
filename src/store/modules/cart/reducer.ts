@@ -18,10 +18,9 @@ const CartData = createSlice({
   initialState,
   reducers: {
     addNewItem: ( state: ICart, action: PayloadAction<IProduct>) => {
-      console.log('Payload', action.payload);
-      console.log('Estado', state.cart);
       state.cart = [...state.cart, action.payload]
-    }
+    },
+    removeCartItem: () => {}
   }
 })
 

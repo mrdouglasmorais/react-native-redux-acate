@@ -41,10 +41,6 @@ const Cart = () => {
         <View
           style={styles.modalBody}
         >
-          {cart.length > 0 && (
-            <Text>Contém itens ...</Text>
-          )}
-
           <TouchableOpacity
             onPress={ () => setShowCartModal(!showCartModal)}
           >
@@ -55,6 +51,20 @@ const Cart = () => {
             />
             <Text>Fechar</Text>
           </TouchableOpacity>
+          
+          {cart.length > 0 ? (
+            <View>
+            { cart.map( item => (
+              <View>
+                <Text>{item.name}</Text>
+              </View>
+            ))}
+            </View>
+          ) : (
+            <View>
+              <Text>Adicione itens ao seu carrinho</Text>
+            </View>
+          )}
         </View>
       </Modal>
       <TouchableOpacity
