@@ -14,8 +14,8 @@ const rootReducers = combineReducers({
   products: productData
 })
 
-
 const store = configureStore({
   reducer: rootReducers
 })
+
 export default store;
